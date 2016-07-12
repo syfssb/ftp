@@ -3,6 +3,7 @@ namespace Home\Controller;
 use Think\Controller;
 class UserController extends CommonController{
 	//用户信息查询
+	//zddhg
 	public function index(){
 		$user=D('user');
         $instlv = session('dhuser.inst_lv');
