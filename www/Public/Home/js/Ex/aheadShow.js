@@ -219,6 +219,7 @@
 													
 													
 													})
+													sumnow=Math.ceil(sumnow);
 													return sumnow;
 													}
 													/* 
