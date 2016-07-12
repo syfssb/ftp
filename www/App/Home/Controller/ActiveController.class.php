@@ -3,7 +3,8 @@ namespace Home\Controller;
 use Think\Controller;
 						class ActiveController extends CommonController{
 						/**index 
-						* @author 孙云峰 
+						* @author 孙云峰
+						* 
 						*/
 						public function index(){
 						// $actives_name['actives_name']=I("get.actives_name");
