@@ -1,0 +1,25 @@
+<!-- 客户信息查询=====张冬冬-->
+    <h2>用户修改</h2>              
+    <div class="clearfix">&nbsp;
+    <form action="/Home/User/user_Modify" name="Umodify" method="post" class="form-horizontal" >
+		<input type="hidden" value="{$userinfo.user_id}" name="user_id"/>
+		<p>
+			<label>用户名：&nbsp;</label>
+			<input style="height:33px;" type="text" class="text" name="user_name" id="user_name" value="{$userinfo.user_name}"><font color="red" name="error"></font>
+		</p>
+		
+		<p>
+			<label>密码：&nbsp;&nbsp;&nbsp;&nbsp;</label>
+			<input style="height:33px;" type="password" class="text" name="user_pwd" id="user_pwd"><font color="red" name="error"></font>
+		</p>
+		
+		<p>
+			<label>确定密码:</label>
+			<input style="height:33px;" type="password" class="text" name="user_pwd2" id="user_pwd2"><font color="red" name="error"></font>
+		</p><br/>
+    
+		<input id="aamm" type="submit"  class="" value="修改" />
+	</form>			
+	</div>
+    <div class="clearfix">&nbsp;</div>
+<script src="__PUBLIC__/Home/js/User/userModify.js"></script>

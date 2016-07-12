@@ -1,0 +1,88 @@
+<!-- 会员新增=====张冬冬-->
+	<style type="text/css">
+		#msform fieldset:not(:first-of-type) {
+			display: none;
+		}
+	</style>
+    <h2>会员新增</h2>              
+    <div class="clearfix">
+    <form action="/Home/Member/vrp_Add" id="msform" name="vrpadd" method="post" class="form-horizontal">
+		<fieldset>
+		<input type="hidden" value="{$userinst}" name="mb_inst"/>
+		<p>
+		<label>身份证号:</label><input type="text" class="text" name="mb_ctf" id="mb_ctf"/><font color="red" name="error"></font>
+		</p>
+		<p>　　　　　　　　　　　　　　　
+		<input type="button" name="next" class="next" value="下一步"/>
+		</p>
+		</fieldset>
+		<fieldset style="display:none;">
+		<p>
+		<label>姓名:</label><input type="text" class="text" name="mb_name" id="mb_name"/><font color="red" name="error"></font>
+		</p>
+		<p>
+		<label>手机号码:</label><input type="text" class="text" name="mb_phone" id="mb_phone" /><font color="red" name="error"></font>
+		</p>
+		<p>
+		<label>客户级别:</label>
+		<select id="mb_lv" name="mb_lv" >
+			<option value="普通客户" selected="selected">普通客户</option>
+			<option value="金卡客户">金卡客户</option>
+			<option value="白金卡客户">白金卡客户</option>
+			<option value="钻石卡客户">钻石卡客户</option>
+		</select>
+		<font color="red" name="error"></font>
+		</p>
+		<p>
+		<label>剩余积分:</label><input type="text" class="text" name="mb_validate" id="mb_validate" value="0" readonly="readonly" /><font color="red" name="error"></font>
+		</p>
+		<p>
+		<label>可兑换积分:</label><input type="text" class="text" name="mb_svalidate" id="mb_svalidate" value="0" readonly="readonly"/><font color="red" name="error"></font>
+		</p>
+		<p>
+		<label>联系地址:</label><input type="text" class="text" name="mb_address" id="mb_address" /><font color="red" name="error"></font>
+		</p>
+		<p>
+		<label>客户属性:</label>
+		<select id="mb_type" name="mb_type" >
+			<option value="外出务工">外出务工</option>
+			<option value="商贸">商贸</option>
+			<option value="社区居民">社区居民</option>
+			<option value="种植户">种植户</option>
+			<option value="养殖户">养殖户</option>
+			<option value="夕阳红">夕阳红</option>
+			<option value="上班族">上班族</option>
+			<option value="其他" selected="selected">其他</option>
+		</select>
+		<font color="red" name="error"></font>
+		</p>
+		<p>
+		<label>信用状态:</label>
+		<select id="mb_xstate" name="mb_xstate" >
+			<option value="良好" selected="selected">良好</option>
+			<option value="黑名单用户">黑名单用户</option>
+		</select>
+		<font color="red" name="error"></font>
+		</p>
+		<p>
+		<label>会员状态:</label>
+		<select id="mb_state" name="mb_state" >
+			<option value="开启" selected="selected">开启</option>
+			<option value="停止">停止</option>
+		</select>
+		<font color="red" name="error"></font>
+		</p>
+		<p>
+		<input type="button" name="previous" class="previous" value="上一步" />　　
+		<!--<input type="submit" name="submit" class="submit" value="提交" />-->
+		<input id="vvaa" type="submit"  class="" value="添 加" />
+		</p>
+		</fieldset>
+		
+		
+	</form>
+	</div>
+	
+    <div class="clearfix">&nbsp;</div>
+<script src="__PUBLIC__/Home/js/Member/jquery.easing.min.js"></script>
+<script src="__PUBLIC__/Home/js/Member/vrpAdd.js"></script>

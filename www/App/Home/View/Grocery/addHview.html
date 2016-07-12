@@ -1,0 +1,26 @@
+
+	<h2>新增操作</h2>     
+	
+    <div class="clearfix">&nbsp;
+    <form action="/Home/Grocery/addHAction"  method="post" class="form-horizontal" name="addH">
+	<label>礼品名称:</label> {$groceryList.gift_name}<br/><br/>
+	<label>目前数量:</label> {$groceryList.inst_gift_num}<br/><br/>
+	<label>礼品条形码: </label> {$groceryList.inst_gift_code} <br/><br/>
+	<label>礼品来源: </label> {$groceryList.inst_gift_source}<br/><br/>
+	<label>礼品属性:</label> {$groceryList.giftlog_type}  <br/><br/>
+	<label>兑换分值:</label> {$groceryList.inst_gift_grate}  <br/><br/>
+	<!-- <input type='hidden' name='id' value='{$groceryList.id}'/> -->
+	<input type='hidden' name='id' value='{$groceryList.id}'/>
+	<input type="hidden"  name="bgiftlog_code"  id="bgiftlog_code"  value="{$groceryList.inst_gift_code}"/>
+	<input type="hidden"  name="inst_gift_num"  id="inst_gift_num"  value="{$groceryList.inst_gift_num}"/>
+	<input type="hidden"  name="bgiftlog_type"  id="bgiftlog_type"  value="{$groceryList.giftlog_type}"/>
+	<input type="hidden" name="bgiftlog_username"  id="bgiftlog_username" value="{$userName}"/>
+	<input type="hidden" name="bgiftlog_inst"  id="bgiftlog_inst" value="{$instno}"/>
+	<input type="hidden" name="bgiftlog_grate"  id="bgiftlog_grate" value="{$groceryList.inst_gift_grate}"/>
+	<label>采购单价（元/件）:</label>
+	<input type="text" class="text" name="bgiftlog_price"  id="bgiftlog_price"/><font color="red" name="error"></font><br/><br/>
+	<label>新增数量（件）:</label>
+	<input type="text" class="text" name="bgiftlog_num"  id="bgiftlog_num"/><font color="red" name="error"></font><br/><br/>
+	<input type='button' id='addHa' value='提交' />
+	</form>			
+	</div> 

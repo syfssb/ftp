@@ -1,0 +1,19 @@
+[Desktop Entry]
+Encoding=UTF-8
+Exec=firefox
+Icon=firefox
+MimeType=
+Name=Firefox
+Name[zh_CN]=浏览器
+Name[zh_TW]=瀏覽器
+Name[ja]=Firefox
+Name[ko]=파이어폭스
+Name[vi]=Duyệt web
+X-KDE-StartupNotify=false
+Terminal=false
+TerminalOptions=
+Type=Application
+Version=1.0
+X-DCOP-ServiceType=
+X-KDE-SubstituteUID=false
+X-KDE-Username=

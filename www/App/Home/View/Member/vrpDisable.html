@@ -1,0 +1,13 @@
+<!-- 会员停用=====张冬冬-->
+    <h2>会员停用</h2>              
+    <div class="clearfix">
+    <form action="/Home/Member/vrp_Disable" name="vrpdisable" method="post" class="form-horizontal">
+		<input type="hidden" value="{$vrpdisable_ctf}" name="vrpdisable_ctf"/>
+		
+		<label>停用原因：</label><textarea  name="disable_reason"  id="disable_reason" ></textarea><br/><font color="red" name="error"></font>
+		<br/><br/>
+		<input id="vvdis" type="submit"  class="" value="提 交" />
+	</form>
+	</div>
+    <div class="clearfix">&nbsp;</div>
+<script src="__PUBLIC__/Home/js/Member/vrpDisable.js"></script>

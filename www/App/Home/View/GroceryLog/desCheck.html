@@ -1,0 +1,49 @@
+
+<!-- 客户信息查询=====孙云峰 -->
+
+    <h2>销库明细查询</h2>     
+	
+    <div class="clearfix">&nbsp;
+    <form action="/Home/GroceryLog/desCheck"  method="get" class="form-horizontal">
+    
+    	<include file="Public:instmenu"/>　　　	　　
+		<br /><br />
+		<label>礼品名称:　</label><input type="text" class="text" name="gift_name"  />
+		　<label>礼品属性:</label><input  type="text" class="text" name="desgiftlog_type"  />
+		<label>礼品条形码:</label><input type="text" class="text" name="desgiftlog_code"  />	<br/><br/>
+		<label>管理员:　　</label><input type="text" class="text" name="desgiftlog_username"  />	
+		  　<label>开始时间:</label><input class="laydate-icon text" id="demo" name="begintime"  >
+		　<label>截止时间:</label><input class="laydate-icon text" id="end" name="endtime"  > 
+	　　　　<input type="submit"   value="查询" />
+		</form>			
+	</div>            	
+    <table width="100%" border="0" cellpadding="0" cellspacing="0">   
+        <tbody><tr class="even">        
+            <th width="10%" scope="col">机构名称</th>
+			<th width="10%" scope="col">礼品名称</th>
+            <th width="15%" scope="col">条形码</th>
+			<th width="10%" scope="col">属性</th>
+			 <th width="10%" scope="col">礼品来源</th>
+			 <th width="10%" scope="col">管理员</th>
+			   <th width="10%" scope="col">销库数量</th>
+            <th width="15%" scope="col">录入时间</th>           
+            <th width="15%" scope="col">原因</th>           
+        </tr>
+    <volist name="logList" id="vo">
+         <tr>   
+            <td scope="col">{$vo.inst_name}</td>
+            <td scope="col">{$vo.gift_name}</td>
+            <td scope="col">{$vo.desgiftlog_code}</td>
+			<td scope="col">{$vo.desgiftlog_type}</td>
+            <td scope="col">{$vo.desgiftlog_source}</td>
+			<td scope="col">{$vo.desgiftlog_username}</td>
+            <td scope="col">{$vo.desgiftlog_num}</td>
+            <td scope="col">{$vo.desgiftlog_time}</td>
+            <td scope="col"><a href="/Home/GroceryLog/Reasons/id/{$vo.desgiftlog_id}">原因</a></td>
+        </tr>
+   </volist>	
+    </tbody></table> 
+   <div class="pagelist">{$page}</div> 
+           <div class="clearfix">&nbsp;</div>
+		  
+

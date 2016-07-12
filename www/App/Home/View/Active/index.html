@@ -1,0 +1,45 @@
+<h2>业务类别信息查询</h2>     
+	
+    <div class="clearfix">&nbsp;
+    <form action="/Home/Active/index"  method="get" class="form-horizontal">
+    　　
+		
+		<label>业务名称:　</label><input type="text" class="text" name="actives_name"  />
+    	　　　
+	
+	　<input type="submit"   value="查询" />　　　<a href="/Home/Active/addActive">新增业务</a>
+		</form>		
+		</div> 
+
+		 <table width="100%" border="0" cellpadding="0" cellspacing="0">   
+        <tbody><tr class="even">        
+             <th width="33%" scope="col">序号</th>          
+            <th width="33%" scope="col">类别名称</th>
+            <th width="33%" scope="col">操作</th>           
+        </tr>
+        <volist name='list' id='vo'>
+         <tr>   
+           
+            <td scope="col">{$i}</td>
+            <td scope="col">{$vo.actives_name}</td>
+            <td scope="col"> 
+			<a href="/Home/Active/ModiActive/id/{$vo.actives_id}" >修改</a>
+			<a href="/Home/Active/desActive/id/{$vo.actives_id}" name="des"> 删除</a>
+			</td>              
+            <!-- <a href="/Home/CustomerFix/fix/cusinf/{$vo.cus_ctf}">补录</a> <a href="">修改</a> -->                        
+        </tr>
+        </volist>
+    </tbody></table> 
+           <div class="pagelist">{$page}</div>
+           <div class="clearfix">&nbsp;</div>
+		   <script type="text/javascript">
+			 $("a[name='des']").click(function(){
+			 if(confirm("确认删除？")){
+			 return true;
+			 }else{
+			 return false;
+			 }
+			 
+			 })
+		   </script>
+		  	

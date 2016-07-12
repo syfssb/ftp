@@ -1,0 +1,32 @@
+
+	<h2>分发操作</h2>     
+	
+    <div class="clearfix">&nbsp;
+    <form action="/Home/Grocery/fenAction"  method="post" class="form-horizontal" name="ff">
+	<label>分发机构:</label>
+		<include file="Public:only"/><font color="red" name="error"></font><br/><br/>
+	<label>礼品名称:</label> {$groceryList.gift_name}<br/><br/>
+	<label>礼品条形码: </label> {$groceryList.inst_gift_code} <br/><br/>
+	<label>礼品来源: </label> {$groceryList.inst_gift_source}<br/><br/>
+	<label>礼品属性:</label> {$groceryList.giftlog_type}  <br/><br/>
+	<!-- <input type='hidden' name='id' value='{$groceryList.id}'/> -->
+	<input type='hidden' name='id' value='{$groceryList.id}'/>
+	<input type="hidden"  name="exgiftlog_code"  id="exgiftlog_code"  value="{$groceryList.inst_gift_code}"/>
+	<input type="hidden"  name="exgiftlog_source"  id="exgiftlog_source"  value="{$groceryList.inst_gift_source}"/>
+	<input type="hidden"  name="inst_gift_num"  id="inst_gift_num"  value="{$groceryList.inst_gift_num}"/>
+	<input type="hidden"  name="exgiftlog_type"  id="exgiftlog_type"  value="{$groceryList.giftlog_type}"/>
+	<input type="hidden" name="exgiftlog_username"  id="exgiftlog_username" value="{$userName}"/>
+	<input type="hidden" name="exgiftlog_inst"  id="exgiftlog_inst" value="{$instno}"/>
+	<label>分发数量:</label>
+	<input type="text" class="text" name="exgiftlog_num"  id="exgiftlog_num"/><font color="red" name="error"></font><br/><br/>
+	
+	
+	<label>兑换积分:</label>
+	<input type="text" class="text" name="exgiftlog_grate"  id="exgiftlog_grate"/><font color="red" name="error"></font><br/><br/>
+	<input type='button' id='fenfa' value='提交' />
+	</form>			
+	</div> 
+	
+	<script src="__PUBLIC__/Home/only.inst.js"></script>
+		
+	

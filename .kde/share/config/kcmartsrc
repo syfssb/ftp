@@ -1,0 +1,13 @@
+[Arts]
+AddOptions=
+AudioIO=
+AutoSuspend=true
+Bits=0
+DeviceName=
+FullDuplex=false
+Latency=250
+NetworkTransparent=false
+SamplingRate=0
+StartRealtime=false
+StartServer=false
+SuspendTime=1

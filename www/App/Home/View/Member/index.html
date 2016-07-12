@@ -1,0 +1,55 @@
+<!-- 会员信息查询=====张冬冬-->
+    <h2>会员信息查询</h2>              
+    <div class="clearfix">
+    <form action="" name="vrpquery" method="post" class="form-horizontal">
+    	<eq name="instlv" value="4">
+		<a href="/Home/Member/vrpAdd">新增会员</a>
+		</eq>
+
+		<include file="Public:instmenu"/><br/><br/>
+
+		<label>身份证号:</label><input type="text" class="text" name="mb_ctf"  />
+		<label>手机号码:</label><input type="text" class="text" name="mb_phone"  />
+		<label>客户姓名:</label><input type="text" class="text" name="mb_name"  /><br/><br/>
+		<label>客户级别:</label><input type="text" class="text" name="mb_lv"  />
+		<label>客户属性:</label><input type="text" class="text" name="mb_type"  />
+		<label>客户信用状态:</label><input type="text" class="text" name="mb_xstate"  />	
+     　　
+		<input type="button"  class="" onclick="vrpinfo_query()" value="查询" /> 　　
+		<input type="button"  class="" onclick="export_vrpinfo()" value="导出" />
+	</form>
+	</div>
+    <table width="100%" border="0" cellpadding="0" cellspacing="0">   
+        <tbody><tr class="even">        
+                       
+            <th width="10%" scope="col">序号</th>
+            <th width="17%" scope="col">姓名</th>
+            <th width="20%" scope="col">信用状态</th>
+			<th width="20%" scope="col">会员状态</th>
+            <th width="25%" scope="col">操作</th>           
+        </tr>
+        <volist name='vrplist' id='vo'>
+         <tr>   
+           
+            <td scope="col">{$i}</td>
+            <td scope="col">{$vo.vrp_name}</td>          
+            <td scope="col">{$vo.vrp_xstate}</td>
+			<td scope="col">{$vo.vrp_state}</td>
+            <td scope="col"><a href="/Home/Member/vrpDetail?vrp_ctf={$vo.vrp_ctf}">详情</a> <eq name="instlv" value="4"><a href="/Home/Member/vrpModify?vrp_ctf={$vo.vrp_ctf}">修改</a> <neq name="vo.vrp_state" value="停止"><a href="/Home/Member/vrpDisable?vrp_ctf={$vo.vrp_ctf}">停用</a></neq></eq> <lt name="instlv" value="4"><eq name="vo.vrp_state" value="停止"><a href="/Home/Member/vrpOpen?vrp_ctf={$vo.vrp_ctf}">开启</a></eq></lt></td>
+        </tr>
+        </volist>
+    </tbody></table> 
+           <div class="pagelist">{$page}</div>
+           <div class="clearfix">&nbsp;</div>
+<script type="text/javascript" src="__PUBLIC__/Home/Main.index.js"></script>
+<script type="text/javascript">
+	function vrpinfo_query(){
+		$("form[name='vrpquery']").attr("action","/Home/Member/index");
+		$("form[name='vrpquery']").submit();
+	}
+
+	function export_vrpinfo(){
+		$("form[name='vrpquery']").attr("action","/Home/Member/exportvrpinfo");
+		$("form[name='vrpquery']").submit();
+	}
+</script>

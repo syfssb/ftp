@@ -1,0 +1,15 @@
+[Desktop Icons]
+VertAlign=true
+
+[Desktop0]
+BackgroundMode=Flat
+WallpaperMode=Scaled
+Wallpaper=/usr/share/wallpapers/background.jpg
+
+[FMSettings]
+ItemTextBackground=0,0,0
+NormalTextColor=255,255,255
+StandardFont=Helvetica,9,-1,5,50,0,0,0,0,0
+ShadowParameters=1,1,32.0,139.0,2,4,0
+TextHeight=2
+TextWidth=80

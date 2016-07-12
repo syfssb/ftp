@@ -1,0 +1,22 @@
+ <h2>销库操作</h2>     
+	
+    <div class="clearfix">&nbsp;
+    <form action="/Home/Grocery/destroyAction"  method="post" class="form-horizontal" name="xk">
+	
+	<label>礼品名称:</label> {$groceryList.gift_name}<br/><br/>
+	<label>礼品条形码: </label> {$groceryList.inst_gift_code} <br/><br/>
+	<label>礼品来源: </label> {$groceryList.inst_gift_source}<br/><br/>
+	<label>礼品属性:</label> {$groceryList.giftlog_type}  <br/><br/>
+	<input type='hidden' name='id' value='{$groceryList.id}'/>
+	<input type="hidden"  name="desgiftlog_code"  id="desgiftlog_code"  value="{$groceryList.inst_gift_code}"/>
+	<input type="hidden"  name="desgiftlog_source"  id="desgiftlog_source"  value="{$groceryList.inst_gift_source}"/>
+	<input type="hidden"  name="inst_gift_num"  id="inst_gift_num"  value="{$groceryList.inst_gift_num}"/>
+	<input type="hidden"  name="desgiftlog_type"  id="desgiftlog_type"  value="{$groceryList.giftlog_type}"/>
+	<input type="hidden" name="desgiftlog_username"  id="desgiftlog_username" value="{$userName}"/>
+	<input type="hidden" name="desgiftlog_inst"  id="desgiftlog_inst" value="{$instno}"/>
+	<label>销库数量:</label>
+	<input type="text" class="text" name="desgiftlog_num"  id="desgiftlog_num"/><font color="red" name="error"></font><br/><br/>
+	<label>销库数原因:</label><textarea  name="desgiftlog_reason"  id="desgiftlog_reason" /></textarea><br/><font color="red" name="error"></font><br/><br/>
+	<input type='button' id='xiaoku' value='提交' />
+	</form>			
+	</div>  

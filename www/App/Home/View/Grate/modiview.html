@@ -1,0 +1,28 @@
+    <h2>{$name}兑换率信息更改</h2>     
+	
+    <div class="clearfix">&nbsp;
+    <form action="/Home/Grate/modi"  method="post" class="form-horizontal">
+	<input type="text" class="text"  value="{$grate}" name="grates_log_now" id="gift_grate"/><font color="red" name="error"></font>
+	<input type="hidden"  value="{$modiuser}"  name="grates_log_username"/>
+	<input type="hidden"  value="{$grate}"  name="grates_log_past"/>
+	<input type="hidden"  value="{$id}"  name="grates_log_inst"/>
+	　　　　　<input type="submit"   value="提交"  id="gra"/>
+		</form>		
+
+		<script type="text/javascript">
+		$(function(){
+			 var zAmount=/^(?!0+(?:\.0+)?$)(?:[1-9]\d*|0)(?:\.\d{1,2})?$/;//金额
+			$("#gra").click(function(){
+			// alert();
+			
+			if($("#gift_grate").val()==""||!zAmount.test($("#gift_grate").val())||0>=$("#gift_grate").val()||10<=$("#gift_grate").val()){
+				$("#gift_grate").next().html("请填入0.01~9.99的数字，例：0.90");
+				alert("请填入0.01~9.99的数字，例：0.90");
+				return false;
+			}else{
+				return true;
+			}
+			})
+		})
+
+		</script>

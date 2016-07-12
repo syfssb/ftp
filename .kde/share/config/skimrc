@@ -1,0 +1,23 @@
+[KDESystemTray]
+/Panel/KDE/KDESystemTray/ShowQuit=false
+
+[MainWindow]
+/Panel/KDE/MainWindow/AutoSnap=false
+
+[Notification Messages]
+systemtrayquitSKIM=false
+
+[SCIM]
+/DefaultIMEngineFactory/zh_CN=05235cfc-43ce-490c-b1b1-c5a2185276ae
+/FrontEnd/IMOpenedByDefault=false
+/FrontEnd/OnTheSpot=false
+/FrontEnd/SharedInputMethod=true
+/FrontEnd/X11/OnTheSpot=false
+/IMEngine/Pinyin/AutoCombinePhrase=true
+/IMEngine/Pinyin/AutoFillPreedit=false
+/IMEngine/Pinyin/DynamicAdjust=true
+/IMEngine/Pinyin/Incomplete=true
+/IMEngine/Pinyin/ShowAllKeys=true
+
+[SetupWindow]
+SetupWindowSize=639,542

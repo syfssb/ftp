@@ -1,0 +1,18 @@
+    <h2>兑换会员信息</h2>  
+    <div class="clearfix">&nbsp;
+    </div> 
+    <form action="/Home/Ex/index"  method="post" class="form-horizontal" name="queryFen">
+		<label>会员身份证:　</label><input type="text" name="vrp_ctf"  value="" id="vrp_ctf"/>
+	　　　　　　　　<input type="button"  value="查询" id="querySub"/><br><br>
+<font color="red" style="font-size: 25px"><strong id="er">{$vrplist.err}</strong></font><br><br>
+<label>会员姓名:</label><font id="flag">{$vrplist.0.vrp_name}</font><br><br>   
+<label>会员级别:</label> {$vrplist.0.vrp_lv}<br><br>
+<label>会员信用状态:</label> {$vrplist.0.vrp_xstate}<br><br>
+<label>会员状态:</label> {$vrplist.0.vrp_state}<br><br>
+<label>可用积分:</label><font color="red" style="font-size: 25px" ><strong id="avfen">{$vrplist.fen}</strong></font>  
+             　　　　　<a href="/Home/Ex/duiShow/ctf/{$vrplist.0.vrp_ctf}/fen/{$vrplist.fen}/name/{$vrplist.0.vrp_name} "  id="showL"> 前往兑换</a> 
+        
+        </form> 
+  
+
+

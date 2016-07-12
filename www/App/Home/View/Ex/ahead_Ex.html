@@ -1,0 +1,56 @@
+							<h2>提前兑换会员信息</h2>  
+							<div class="clearfix">&nbsp;
+							</div> 
+							<form action="/Home/Ex/ahead_Ex"  method="post" class="form-horizontal" name="queryFen">
+							<label>会员身份证:　</label><input type="text"  name="vrp_ctf"  value="" id="vrp_ctf"/>
+							　　　　　　　　<input type="button"   value="查询" id="querySub"/>　　　　　<br><br>
+							<font color="red" style="font-size: 25px"><strong id="er">{$vrplist.err}</strong></font><br><br>
+							<label>会员姓名:</label><font id="flag">{$vrplist.0.vrp_name}</font><br><br>   
+							<label>会员级别:</label> {$vrplist.0.vrp_lv}<br><br>
+							<label>会员信用状态:</label> {$vrplist.0.vrp_xstate}<br><br>
+							<label>会员状态:</label> {$vrplist.0.vrp_state}<br><br>
+							
+							　　　　　　　　　　　　
+							
+							
+							
+							
+							<!-- 		<a href="/Home/Ex/aheadShow/ctf/{$vrplist.0.vrp_ctf}/name/{$vrplist.0.vrp_name} "  id="showL"> 前往兑换</a>  -->
+							
+							</form > 
+							<form action="/Home/Ex/aheadShow" method="post" name="aheadshow">
+							<input type="hidden" name="ctf" value="{$vrplist.0.vrp_ctf}">
+							<input type="hidden" name="name" value="{$vrplist.0.vrp_name}">
+							<input type="hidden" name="sql" value="">
+							<div id="data">
+							<input type="button" name="add"  value="添加业务类别" onclick="addActive(this)">
+							
+							</div>
+							<br/><br/>
+							<input type='button' id='showL' value='前往提前兑换' />　　　　　　　　　　　　　　　　　　　　　　　　
+							</form>
+							<script type="text/template" id="tr-template">
+							<div name="activesdatas">
+							<br/><br/>
+							<label>请填写单号:</label>
+							<input type='text' name='itemcode' value='' onblur="checkitem(this)"/>　<font color="red" name="error"></font>　　　
+							<label>搜索业务:</label>
+							<input type="text" onpropertychange="getActiveByInput(this)" />　　
+							<label>业务类别:</label>
+							<select name="actives" onchange="checkselect(this)"> <option value="-1">-----请选择------ </option></select><font color="red" name="error"></font><br/><br/>
+							<label>转介标识: 　</label>
+							<select name="flagJ" onchange="checksflag(this)">
+							<option value="-1">-----请选择------ </option>
+							<option value="自主办理">自主办理</option>
+							<option value="推荐">推荐</option>
+							<option value="便民">便民</option>
+							</select><font color="red" name="error"></font>
+<span id="phonespan" style="width:500px;"></span>
+							<input type='button' name='dele' value='撤除'   onclick="deleteData(this)"/>
+							</div>
+							</script>
+							
+							<script type="text/template" id="tr-phone">
+							<label>推荐人或转介人手机:</label>
+							<input type='fphone' name='fphone' value='' onblur="checkphone(this)"/>　<font color="red" name="error"></font>
+							</script>

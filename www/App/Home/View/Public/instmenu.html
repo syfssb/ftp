@@ -1,0 +1,23 @@
+﻿		<input type="hidden" value="{$instno}" id="instnum"/>
+		<input type="hidden" value="{$instlv}" id="instlevel"/>
+		<elt name="instlv" value="3">
+			<elt name="instlv" value="1">
+			<label>市级机构:</label>
+			<select class="comheight" id="citys" name="citys" >
+					<option value="-1">---请选择市---</option>
+			</select>
+			</elt>
+			<elt name="instlv" value="2">
+			<label>县级机构:</label>
+			<select class="comheight" id="countys" name="countys">
+				<option value="-1">---请选择县---</option>
+			</select>
+			</elt>
+			<label>网点机构:</label>
+			<select class="comheight" id="instno" name="instno">
+				<option value="-1">---请选择网点---</option>
+			</select>
+		</elt>
+		<eq name="instlv" value="4">
+			<input id="instno" name="instno"  type="hidden">
+		</eq>

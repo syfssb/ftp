@@ -1,0 +1,28 @@
+	
+	<h2>新增操作</h2>     
+	
+	<div class="clearfix">&nbsp;
+	<form action="/Home/Grocery/addNAction"  method="post" class="form-horizontal" name="addN">
+	<label>礼品条形码: </label> 
+	<input type="text" class="text" name="bgiftlog_code"  id="bgiftlog_code"/><font color="red" name="error"></font><br/><br/>
+	<label>礼品名称:</label> 
+	<input type="text" class="text" name="gift_name"  id="gift_name"/><font color="red" name="error"></font><br/><br/>
+	<label>礼品来源: </label> 
+	<input type="text" class="text" name="inst_gift_source"  id="inst_gift_source" value="自主采购" readonly /><font color="red" name="error"></font><br/><br/>
+	<label>礼品属性:</label> 
+	<input type="text" class="text" name="bgiftlog_type"  id="bgiftlog_type" readonly /><font color="red" name="error"></font><br/><br/>
+	<label>兑换分值:</label> 
+	<input type="text" class="text" name="bgiftlog_grate"  id="bgiftlog_grate"/><font color="red" name="error"></font><br/><br/>
+	<input type="hidden" name="bgiftlog_username"  id="bgiftlog_username" value="{$userName}"/>
+	<input type="hidden" name="bgiftlog_inst"  id="bgiftlog_inst" value="{$instno}"/>
+	<input type="hidden" name="instlevelo"  id="instlevelo" value="{$instlv}"/>
+	
+	<!-- 礼品标示 -->
+	<input type="hidden" name="giftflag"  id="giftflag" value="0"/>
+	<label>采购单价（元/件）:</label>
+	<input type="text" class="text" name="bgiftlog_price"  id="bgiftlog_price"/><font color="red" name="error"></font><br/><br/>
+	<label>新增数量（件）:</label>
+	<input type="text" class="text" name="bgiftlog_num"  id="bgiftlog_num"/><font color="red" name="error"></font><br/><br/>
+	<input type='button' id='addNa' value='提交' />
+	</form>			
+	</div> 

@@ -1,0 +1,47 @@
+<!-- 会员信息修改=====张冬冬-->
+    <h2>会员信息修改</h2>              
+    <div class="clearfix">
+    <form action="/Home/Member/vrp_Modify" name="vrpmodify" method="post" class="form-horizontal">
+		<input type="hidden" value="{$vrpinfo.vrp_ctf}" name="vrp_ctf"/>
+		<input type="hidden" value="{$vrpinfo.vrp_phone}" name="vrp_phone"/>
+		<p>
+		<label>手机号码:</label><input type="text" class="text" name="mb_phone" id="mb_phone" value="{$vrpinfo.vrp_phone}" /><font color="red" name="error"></font>
+		</p>
+		<p>
+		<label>联系地址:</label><input type="text" class="text" name="mb_address"id="mb_address" value="{$vrpinfo.vrp_address}" /><font color="red" name="error"></font>
+		</p>
+		<p>
+		<!--<label>客户级别:</label><input type="text" class="text" name="mb_lv" id="mb_lv" value="{$vrpinfo.vrp_lv}" />-->
+		<label>客户级别:</label>
+		<select id="mb_lv" name="mb_lv" >
+			<option value="{$vrpinfo.vrp_lv}" selected="selected">当前级别--->{$vrpinfo.vrp_lv}</option>
+			<option value="普通客户">普通客户</option>
+			<option value="金卡客户">金卡客户</option>
+			<option value="白金卡客户">白金卡客户</option>
+			<option value="钻石卡客户">钻石卡客户</option>
+		</select>
+		<font color="red" name="error"></font>
+		</p>
+		<p>
+		<!--<label>客户属性:</label><input type="text" class="text" name="mb_type" id="mb_type" value="{$vrpinfo.vrp_type}" />-->
+		<label>客户属性:</label>
+		<select id="mb_type" name="mb_type" >
+			<option value="{$vrpinfo.vrp_type}" selected="selected">当前属性--->{$vrpinfo.vrp_type}</option>
+			<option value="外出务工">外出务工</option>
+			<option value="商贸">商贸</option>
+			<option value="社区居民">社区居民</option>
+			<option value="种植户">种植户</option>
+			<option value="养殖户">养殖户</option>
+			<option value="夕阳红">夕阳红</option>
+			<option value="上班族">上班族</option>
+			<option value="其他">其他</option>
+		</select>
+		<font color="red" name="error"></font>
+		</p>
+		
+		<input id="vvmm" type="submit"  class="" value="修改" />
+	</form>
+	</div>
+	
+    <div class="clearfix">&nbsp;</div>
+<script src="__PUBLIC__/Home/js/Member/vrpModify.js"></script>

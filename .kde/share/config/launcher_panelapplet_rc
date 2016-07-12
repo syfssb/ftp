@@ -1,0 +1,5 @@
+[General]
+IconDim=20
+AutoAdjustEnabled=false
+AutoAdjustMinItems=2
+Buttons=kde-showdesktop.desktop,firefox.desktop,kde-Kontact.desktop,kde-konsole.desktop,kde-ctrlpanel.desktop

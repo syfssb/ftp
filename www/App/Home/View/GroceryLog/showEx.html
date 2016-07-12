@@ -1,0 +1,42 @@
+<h2>兑换明细</h2>     
+	
+    <div class="clearfix">&nbsp;
+    </div>
+    <form>
+
+<label>礼品条形码: </label>{$List.giftlog_code}<br><br>
+<label>兑换数量: </label>{$List.giftlog_num}<br><br>
+<label>属性: </label>{$List.giftlog_type}<br><br>
+<label>来源: </label>{$List.giftlog_source}<br><br>
+<label>兑换时间: </label>{$List.giftlog_time}<br><br>
+<label>会员身份证: </label>{$List.giftlog_vrp_ctf}<br><br>
+<label>兑换率: </label>{$List.giftlog_percent}<br><br>
+<label>兑换机构号: </label>{$List.giftlog_inst}<br><br>
+<label>是否提前兑换: </label>{$List.giftlog_ahead}<br><br>
+<label>是否对账: </label>{$List.giftlog_sure}<br><br>
+<label>操作人: </label>{$List.giftlog_username}<br><br>
+<label>消耗积分: </label>{$List.giftlog_fen}<br><br>
+<eq name="List.giftlog_ahead" value="是">
+	
+<h2>提前兑换业务明细</h2>     
+    <div class="clearfix">&nbsp;
+    </div>
+<volist name="ListA" id="vo">	
+<h4>业务{$i} ：</h4>     
+    <div class="clearfix">&nbsp;
+    </div>
+<label>单号: </label>{$vo.itemcode}<br><br>
+<label>业务类别: </label>{$vo.actives_name}<br><br>
+<label>办理渠道: </label>{$vo.zflag}<br><br>
+<switch name="vo.zflag">   
+ <case value="自主办理"></case>   
+  <case value="推荐"><label>推荐人电话: </label>{$vo.tphone}<br><br></case>  
+  <case value="便民"><label>便民转介人手机: </label>{$vo.bphone}<br><br></case>  
+    <default />
+    </switch>
+<br><br>
+</volist>	
+
+</eq>	
+
+</form>

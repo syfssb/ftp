@@ -1,0 +1,29 @@
+<!-- 客户信息查询=====张冬冬-->
+    <h2>用户新增</h2>              
+    <div class="clearfix">&nbsp;
+    <form action="/Home/User/user_Add" name="Uadd" method="post" class="form-horizontal" >
+    
+    	<include file="Public:only"/><font color="red" name="error"></font>
+
+			<p>
+                <label>用户名：&nbsp;</label>
+                <input style="height:33px;" type="text" class="text" name="user_name" id="user_name"><font color="red" name="error"></font>
+            </p>
+			
+            <p>
+				<label>密码：&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                <input style="height:33px;" type="password" class="text" name="user_pwd" id="user_pwd"><font color="red" name="error"></font>
+            </p>
+			
+            <p>
+             	<label>确定密码:</label>
+                <input style="height:33px;" type="password" class="text" name="user_pwd2" id="user_pwd2"><font color="red" name="error"></font>
+            </p><br/>
+    
+		<input id="aadd" type="submit"  class="" value="添加" /> 　　
+		<input type="reset" class="" value="重置">
+		</form>			
+	</div>
+    <div class="clearfix">&nbsp;</div>
+<script type="text/javascript" src="__PUBLIC__/Home/only.inst.js"></script>
+<script src="__PUBLIC__/Home/js/User/userAdd.js"></script>

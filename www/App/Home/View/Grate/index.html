@@ -1,0 +1,36 @@
+    <h2>兑换率信息查询</h2>     
+	
+    <div class="clearfix">&nbsp;
+    <form action="/Home/Grate/index"  method="get" class="form-horizontal">
+  
+    	<include file="Public:instmenu"/>　　　　
+		
+		 <!--  <label>开始时间:</label><input class="laydate-icon text" id="demo" name="free_begintime"  >
+		　<label>截止时间:</label><input class="laydate-icon text" id="end" name="free_endtime"  > -->
+	<lt name="instlv" value="4"> <input type="submit"   value="查询" /></lt>   　　　　　　　　　　　　　
+   
+		</form>			
+	</div>            	
+    <table width="100%" border="0" cellpadding="0" cellspacing="0">   
+        <tbody><tr class="even">        
+                       
+            <!-- <th width="5%" scope="col">序号</th> -->
+            <th width="33%" scope="col">机构名称</th>
+            <th width="33%" scope="col">兑换率</th>
+            <th width="33%" scope="col">操作</th>           
+        </tr>
+        <volist name='list' id='vo'>
+         <tr>   
+           
+            <td scope="col">{$vo.inst_name}</td>
+            <td scope="col">{$vo.gift_grate}</td>
+            <td scope="col"> 
+            <a href="/Home/Grate/modiview/id/{$vo.inst_no}/grate/{$vo.gift_grate}/name/{$vo.inst_name}">修改</a>
+			</td>              
+        </tr>
+        </volist>
+    </tbody></table> 
+           <div class="pagelist">{$page}</div>
+           <div class="clearfix">&nbsp;</div>
+		  
+

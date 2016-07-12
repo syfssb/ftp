@@ -1,0 +1,13 @@
+<!-- 会员开启=====张冬冬-->
+    <h2>会员开启</h2>              
+    <div class="clearfix">
+    <form action="/Home/Member/vrp_Open" name="vrpopen" method="post" class="form-horizontal">
+		<input type="hidden" value="{$vrpopen_ctf}" name="vrpopen_ctf"/>
+		
+		<label>开启原因：</label><textarea  name="open_reason"  id="open_reason" ></textarea><br/><font color="red" name="error"></font>
+		<br/><br/>
+		<input id="vvopen" type="submit"  class="" value="提 交" />
+	</form>
+	</div>
+    <div class="clearfix">&nbsp;</div>
+<script src="__PUBLIC__/Home/js/Member/vrpOpen.js"></script>

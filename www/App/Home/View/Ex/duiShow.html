@@ -1,0 +1,74 @@
+                        <h2>积分兑换</h2>  
+                        <div class="clearfix">&nbsp;
+                        <!-- <p name="time">11</p> -->
+                        </div>
+                        
+                        <form action="/Home/Ex/duiAction"  method="post" class="form-horizontal" name="DuiHuan"> 
+                         <input type='hidden' name='graocrydata' value=''/>
+                        <input type="hidden" name="gracelog" value=""/>
+                        <!-- <input type="hidden" name="sumfen[]" value=''/> -->
+                        <label>姓名:</label><font color=" #0000E3" style="font-size: 25px" ><strong id="vname">{$name}</strong></font> 
+                        　　　　　　　<label>可用积分:</label><font color="red" style="font-size: 25px" ><strong id="avfen">{$fen}</strong></font> 　　　　　　　　　　　　<label>已用积分:</label><font color="red" style="font-size: 25px" ><strong id="hfen">0</strong></font><br/><br/>
+                        <input type="hidden" name="nowgrate" value="{$nowgrate}">
+                        <input type="hidden" name="ctf" value="{$ctf}">
+                        <input type="hidden" name="userName" value="{$userName}">
+                        　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　<input type="button" name="sub" value="兑换" >
+                        
+                        
+                        
+                        
+                        <table width="100%" border="0" cellpadding="0" cellspacing="0">   
+                        <tbody><tr class="even">        
+                        
+                        <th width="5%" scope="col">选择<input type="checkbox" name="deleall" /></th> 
+                        <th width="20%" scope="col">礼品名称</th>
+                        <th width="15%" scope="col">条形码</th>
+                        <th width="10%" scope="col">来源</th>
+                        <th width="10%" scope="col">属性</th>
+                        <th width="10%" scope="col">兑换分值(已计算兑换率)</th>
+                        <th width="10%" scope="col">剩余数量</th>
+                        
+                        <th width="20%" scope="col">选择数量</th>           
+                        </tr>
+                        <volist name='list' id='vo'>
+                        <!-- 库存表 -->
+						<div style="width:0px; height:0px;display:inline-block; line-height:0px; overflow:hidden;">
+                        <font style="font-size:0;"  name ="{$vo.id}f">{$vo.id}</font>
+                        <font style="font-size:0;" name ="{$vo.id}f">{$instno}</font>
+                        <font style="font-size:0;" name ="{$vo.id}f">{$vo.inst_gift_code}</font>
+                        <font style="font-size:0;" name ="{$vo.id}f">{$vo.inst_gift_grate}</font>
+                        <font style="font-size:0;" name ="{$vo.id}f">{$vo.inst_gift_source}</font>
+                        <font style="font-size:0;" name ="{$vo.id}f">{$vo.giftlog_type}</font>
+                        <font style="font-size:0;" name ="{$vo.id}f">{$vo.inst_gift_num}</font>
+						</div>
+                        <tr id="{$vo.id}">   
+                        
+                        <td scope="col"><input type="checkbox" name="{$vo.id}" onchange="showH(this)"/> </td> 
+                        <td scope="col" name="gname">{$vo.gift_name}</td>
+                        <td scope="col" name="gcode">{$vo.inst_gift_code}</td>     
+                        <td scope="col" name="gsource">{$vo.inst_gift_source}</td>
+                        <td scope="col" name="gtype">{$vo.giftlog_type}</td>           
+                        <td scope="col" name="ggrate">{$vo.fendisc}</td>
+                        <td scope="col" name="gnum">{$vo.inst_gift_num}</td>
+                        <td scope="col" name="{$vo.id}"></td>
+                        
+                        </tr>
+                        </volist>
+                        </tbody></table> 
+                        </form> 
+                        
+                        <!-- <font color="red" style="font-size: 25px"><strong>21</strong></font>   -->
+                        　　　　 
+                        
+                        <div class="clearfix">&nbsp;</div>
+                        <!-- 动态添加html代码块 ============-->
+                        <script type="text/template" id="tr-template">
+                        <input type="text" class="only" name="num[]" value="0" onblur="checkNum(this)" />
+                        <font name="error" color="red"></font>
+						<div style="width:0px; height:0px;display:inline-block; line-height:0px; overflow:hidden;">
+                        <font  style="font-size:0;" name='graocrydataO'></font>
+                        <font  style="font-size:0;" name="gracelogO"></font>
+						</div>
+                        </script>
+                        
+                        

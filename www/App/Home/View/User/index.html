@@ -1,0 +1,40 @@
+<!-- 客户信息查询=====张冬冬-->
+    <h2>用户信息查询</h2>              
+    <div class="clearfix">&nbsp;
+    <form action="/Home/User/index"  method="post" class="form-horizontal">
+    
+    	<include file="Public:only"/>&nbsp;
+
+		<!--<label>机构号:</label><input  type="text" class="text" name="user_inst"  />&nbsp;-->
+		<label>用户姓名:</label><input type="text" class="text" name="username"  />
+		<!--<label>开始时间:</label><input class="laydate-icon text" id="demo" name="free_begintime"  >
+		<label>截止时间:</label><input class="laydate-icon text" id="end" name="free_endtime"  >-->
+		
+     　　
+		<input type="submit"  class="" value="查 询" /> 　　 　　
+		<a href="/Home/User/userAdd">添加用户</a>
+		<!--<input type='' name='cao' value='{$cao}'/>-->
+		</form>
+	</div>
+    <table width="100%" border="0" cellpadding="0" cellspacing="0">   
+        <tbody><tr class="even">        
+                       
+            <th width="12%" scope="col">序号</th>
+            <th width="25%" scope="col">机构号</th>
+            <th width="30%" scope="col">用户姓名</th>
+            <th width="25%" scope="col">操作</th>           
+        </tr>
+        <volist name='userlist' id='vo'>
+         <tr>   
+           
+            <td scope="col">{$i}</td>
+            <td scope="col">{$vo.user_inst}</td>          
+            <td scope="col">{$vo.user_name}</td>
+            <td scope="col"><a href="/Home/User/userModify?userid={$vo.user_id}">修改</a> <a name="del" href="/Home/User/user_del?userid={$vo.user_id}">删除</a></td>                  
+        </tr>
+        </volist>
+    </tbody></table> 
+           <div class="pagelist">{$page}</div>
+           <div class="clearfix">&nbsp;</div>
+<script type="text/javascript" src="__PUBLIC__/Home/only.inst.js"></script>
+<script src="__PUBLIC__/Home/js/User/index.js"></script>
